@@ -15,7 +15,7 @@ module.exports = {
         throw new Error(res.data.message)
       } else {
         console.dir(res);
-        return res.data.main.temp;
+        return Math.round(res.data.main.temp);
       }
     }, function (res) {
       throw new Error(res.data.message);
